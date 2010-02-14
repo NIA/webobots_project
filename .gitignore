@@ -1,0 +1,14 @@
+*.log
+tmp/**/*
+.directory
+.DS_Store
+doc/api
+doc/app
+coverage
+db/*.sqlite3
+*.sw*
+*~
+public/system
+config/database.yml
+config/deploy.rb
+vision.pdf
