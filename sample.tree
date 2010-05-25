@@ -1,73 +1,63 @@
-(def some
-  (params x y)
-  (block
-    (= ret 5)
-    (return ret)
+(block
+  (funcdef some
+    (params x y)
+    block
   )
-)
 
-
-
-(call some
-  (params 2.2 3.0)
-)
-
-(= a 3)
-(= b
-  (/ 
-    (call some (params a a))
-    2
+  (funccall some
+    (params 2.2 3.0)
   )
-)
-(= var 1)
 
-(if (> a 3)
-  (block
-    (= temp 0)
-  )
-  (if (var)
-    (block
-      (= temp 0)
-    )
-    (block
-      (= temp 0)
+  
+  (= a 3)
+  
+  (= b
+    (/
+      (funccall some
+        (params a a)
+      )
+     2
     )
   )
-)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-(while (var)
-  (block
-    (= temp 0)
+  
+  (if (< b 2)
+    (block
+        (funccall A params)
+    )
+    (block
+      (if (> b 11)
+        (block
+            (funccall B params)
+        )
+        (block
+            (funccall C params)
+        )
+      )
+    )
   )
-)
-
-
-
-(= a 1)
-(= b 0)
-
-(= c (! a))
-(= to_bool (! (! a)))
-
-(log
-  (string some)
-  a
-  2
+  
+  (while
+    (> a 0)
+    (block
+      (= a
+        (- a 1)
+      )
+    )
+  )
+  
+  (= a 1)
+  
+  (= b 0)
+  
+  (= c
+    (not a)
+  )
+  
+  (= to_bool
+    (not
+      (not a)
+    )
+  )
+  
+  (log "some" a)
 )

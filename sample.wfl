@@ -1,0 +1,31 @@
+def some(x, y)
+  # return 0.0 on default
+end
+
+some(2.2, 3.0)
+
+a = 3
+b = some(a, a) / 2
+
+if b < 2
+  A()
+else
+  if b > 11
+    B()
+  else
+    C()
+  end
+end
+
+
+while a > 0
+  a = a - 1
+end
+
+a = 1
+b = 0
+
+c = not a # => 0,1
+to_bool = not not a # => 0,1
+
+@log "some", a
